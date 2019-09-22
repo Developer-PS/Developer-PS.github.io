@@ -6,26 +6,35 @@
 </head>
 <body onclick="playAudio()">
 
-    <div class="logo-container">
-    <img id="logo" src="pfandidos-logo.png" alt="Pfandidos Logo"  draggable="false">
-    </div>
+<div id="black"></div>
 
-    <audio id="ak47-shot">
-        <source src="ak-47.mp3" type="audio/mpeg">
-    </audio>
+<div class="logo-container">
+    <img id="logo" src="pfandidos-logo.png" alt="Pfandidos Logo" draggable="false">
+</div>
+
+<audio id="ak47-shot">
+    <source src="ak-47.mp3" type="audio/mpeg">
+</audio>
+
 
 </body>
 
 <script>
-    $( document ).ready(function() {
-        $('body').css('display', 'none').fadeIn(2000);
-    });
 
     let clickSound = document.getElementById("ak47-shot");
 
     function playAudio() {
         clickSound.cloneNode(true).play();
     }
+
+    $('<img/>').attr('src', "background.jpg").on('load', function () {
+        $(this).remove();
+        $("body").css('background-image', 'url(background.jpg)');
+        $("#black").fadeOut(500, function () {
+            $('.logo-container').fadeIn(2500);
+        });
+
+    });
 </script>
 
 </html>

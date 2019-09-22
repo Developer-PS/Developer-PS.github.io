@@ -33,6 +33,7 @@ body {
     transform: translateY(-50%);
     position: relative;
     top: 50%;
+    display: none;
 }
 
 #logo {
@@ -41,9 +42,17 @@ body {
     height: 40vh;
     transform: scale(0.8);
     transition: transform .2s ease-in-out;
+
 }
 
 #logo:hover {
     transform: scale(1.2);
 
+}
+
+#black {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999
 }
