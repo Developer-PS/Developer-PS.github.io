@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onclick="playAudio()">
+
+    <div class="logo-container">
+    <img id="logo" src="pfandidos-logo.png" alt="Pfandidos Logo"  draggable="false">
+    </div>
+
+    <audio id="ak47-shot">
+        <source src="ak-47.mp3" type="audio/mpeg">
+    </audio>
+
 </body>
+
+<script>
+    var clickSound = document.getElementById("ak47-shot");
+
+    function playAudio() {
+        clickSound.cloneNode(true).play();
+    }
+</script>
+
 </html>
