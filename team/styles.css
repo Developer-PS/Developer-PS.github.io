@@ -39,6 +39,9 @@ body {
     .header a:hover {
       color: #82afe3; }
 
+.sticky {
+  height: 60px; }
+
 .players-container {
   display: flex;
   justify-content: center;

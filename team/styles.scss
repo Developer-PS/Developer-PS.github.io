@@ -18,6 +18,7 @@ $width: 1600px;
 
 body{
   cursor: url(/images/cursor-crosshair.png) 16 16, auto;
+    
 }
 .super-container{
   display: flex;
@@ -55,7 +56,9 @@ body{
   }
 }
 
-
+.sticky{
+    height: 60px
+}
 
 .players-container{
   display: flex;

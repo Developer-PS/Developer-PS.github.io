@@ -115,11 +115,12 @@
 
 
             $(window).scroll(function() {
-                if ($(this).scrollTop() > 250){  
+                if ($(this).scrollTop() > 110){  
                     $('.header').addClass("sticky");
                 }
-                else{
+                else if ($(this).scrollTop() < 10){
                     $('.header').removeClass("sticky");
+                    window.scrollTo(0,0);
                 }
             });
 
