@@ -15,7 +15,9 @@ $players-bg-color: #303030;
 $blue:  #5995DA;
 $header-bg-color:  #494949;
 $width: 1600px;
-body{    cursor: url(/images/cursor-crosshair.png) 16 16, auto;
+
+body{
+  cursor: url(/images/cursor-crosshair.png) 16 16, auto;
 }
 .super-container{
   display: flex;
