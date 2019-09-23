@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: 'Monda', sans-serif; }
 
+body {
+  cursor: url(/images/cursor-crosshair.png) 16 16, auto; }
+
 .super-container {
   display: flex;
   flex-direction: column;
