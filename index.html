@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <title>Pfandidos</title>
-</head>
-<body onclick="playAudio()">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+        <title>Pfandidos</title>
+    </head>
+    <body onclick="playAudio()">
 
-<div id="black"></div>
+        <div id="black"></div>
 
-<div class="logo-container">
-    <img id="logo" src="pfandidos-logo.png" alt="Pfandidos Logo" draggable="false">
-</div>
+        <div class="logo-container">
+            <img id="logo" src="images/pfandidos-logo.png" alt="Pfandidos Logo" draggable="false">
+        </div>
 
-<audio id="ak47-shot">
-    <source src="ak-47.mp3" type="audio/mpeg">
-</audio>
+        <audio id="ak47-shot">
+            <source src="ak-47.mp3" type="audio/mpeg">
+        </audio>
 
 
-</body>
+    </body>
 
-<script>
+    <script>
 
-    let clickSound = document.getElementById("ak47-shot");
+        let clickSound = document.getElementById("ak47-shot");
 
-    function playAudio() {
-        clickSound.cloneNode(true).play();
-    }
+        function playAudio() {
+            clickSound.cloneNode(true).play();
+        }
 
-    $('<img/>').attr('src', "background.jpg").on('load', function () {
-        $(this).remove();
-        $("body").css('background-image', 'url(background.jpg)');
-        $("#black").fadeOut(300, function () {
-            $('.logo-container').fadeIn(2000);
+        $('<img/>').attr('src', "images/background.jpg").on('load', function () {
+            $(this).remove();
+            $("body").css('background-image', 'url("images/background.jpg")');
+            $("#black").fadeOut(300, function () {
+                $('.logo-container').fadeIn(2000);
+            });
+
         });
 
-    });
-</script>
+        $("#logo").click(
+            function(){setTimeout(
+                function(){
+
+                    document.location.href = "/team/team.html";
+                },600);
+                      }
+        ); 
+    </script>
 
 </html>
