@@ -15,7 +15,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Monda', sans-serif;
+
 
         }
 
@@ -25,6 +25,8 @@
             background-color: black;
             overflow: hidden;
             cursor: url(/images/cursor-crosshair.png) 16 16, auto;
+            color: white;
+            font-family: 'Monda', sans-serif;
 
         }
         #game{
@@ -47,17 +49,20 @@
             transform: translate(-50%, -50%);
             text-align: center;
             font-size: 30px;
-            color: white;
+
             user-select: none;
 
         }
-
+    #history{
+        top: 0px; text-align: center;
+        color: #e2e2e2;
+    }
 
 
     </style>
 
         <div id="game">
-
+            <div id="history"></div>
 
             <div id ="info">
                 <div id ="result"></div>
@@ -86,7 +91,7 @@
             let clickedTime=0;
             let reactionTime=0;
             let redTimer;
-
+            let history=[];
 
 
             //main game function
@@ -116,14 +121,17 @@
                 reactionTime = clickedTime-startTime;               //calculates reaction time
 
                 if(red){//if red is already there
-                    $( "#info" ).html("Your Time: "+ millisecondsToTime(reactionTime)+" <br> Click to restart!");
+                    let tmpTime=millisecondsToTime(reactionTime);
+                    $( "#info" ).html("Your Time: "+ tmpTime +" <br> Click to restart!");
                     red=false;
+                    history.push(" "+tmpTime);
+                    $("#history").text(history.toString());
                 }
 
                 else{//if clicked too early
                     clearTimeout(redTimer);                         //stop red timer
                     $( "#info" ).html("Too early! <br> Click to restart!");
-                    $("#game").css("background-color", "#820c0c"); 
+                    $("#game").css("background-color", "#9b0d0d");
                 }
             }
 
@@ -132,7 +140,7 @@
             function changeColorAfterRandom(){ 
                 redTimer = setTimeout(function(){
                     shotSound.play();
-                    $("#game").css("background-color", "#820c0c");  //set Background Color
+                    $("#game").css("background-color", "#9b0d0d");  //set Background Color
                     startTime=new Date().getTime();                 //saves time when red appears
                     red="true";                                     
                 }, getRandInt(500,5000));
@@ -144,7 +152,7 @@
                 if (milli>1000){
                 var milliseconds = milli % 1000;
                 var seconds = Math.floor((milli / 1000));
-                return seconds + "." + milliseconds+"s";
+                return seconds + "," + milliseconds+"s";
                 }
                 else{
                     return milli+"ms";
