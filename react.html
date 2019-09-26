@@ -18,6 +18,9 @@
 
             </div>
 
+            <audio id="ak47-shot">
+                <source src="ak-47.mp3" type="audio/mpeg">
+            </audio>
 
         </div>
         <script>
@@ -29,7 +32,7 @@
 
             });
 
-
+            let shotSound = document.getElementById("ak47-shot");
             let started=true;
             let red=false;
             let startTime=0;
@@ -66,7 +69,7 @@
                 reactionTime = clickedTime-startTime;               //calculates reaction time
 
                 if(red){//if red is already there
-                    $( "#info" ).html("Your Time: "+ millisecondsToTime(reactionTime)+"s <br> Click to restart!");
+                    $( "#info" ).html("Your Time: "+ millisecondsToTime(reactionTime)+" <br> Click to restart!");
                     red=false;
                 }
 
@@ -81,6 +84,7 @@
             //changes BackgroundColor after random time
             function changeColorAfterRandom(){ 
                 redTimer = setTimeout(function(){
+                    shotSound.play();
                     $("#game").css("background-color", "#820c0c");  //set Background Color
                     startTime=new Date().getTime();                 //saves time when red appears
                     red="true";                                     
@@ -90,9 +94,14 @@
             //converts miliseconds to seconds.miliseconds
             function millisecondsToTime(milli)
             {
+                if (milli>1000){
                 var milliseconds = milli % 1000;
                 var seconds = Math.floor((milli / 1000));
-                return seconds + "." + milliseconds;
+                return seconds + "." + milliseconds+"s";
+                }
+                else{
+                    return milli+"ms";
+                }
             }
 
             //returns random int betwenn min and max
@@ -117,6 +126,8 @@
                 height: 100vh;
                 background-color: black;
                 overflow: hidden;
+                cursor: url(/images/cursor-crosshair.png) 16 16, auto;
+
             }
             #game{
                 width: 100%;
