@@ -2,12 +2,59 @@
 <html lang='en'>
     <head>
         <meta charset='UTF-8'/>
-        <title>Test</title>
+        <title>Pfandidos | Reaction Test</title>
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
         <link href="https://fonts.googleapis.com/css?family=Monda&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     </head>
     <body>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Monda', sans-serif;
+
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+            cursor: url(/images/cursor-crosshair.png) 16 16, auto;
+
+        }
+        #game{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            background-color: #326c0e;
+        }
+
+        #info{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            user-select: none;
+
+        }
+
+
+
+    </style>
 
         <div id="game">
 
@@ -111,52 +158,7 @@
 
 
         </script>
-        <style>
 
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Monda', sans-serif;
-
-            }
-
-            body{
-                width: 100vw;
-                height: 100vh;
-                background-color: black;
-                overflow: hidden;
-                cursor: url(/images/cursor-crosshair.png) 16 16, auto;
-
-            }
-            #game{
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-                background-color: #326c0e;
-            }
-
-            #info{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-                text-align: center;
-                font-size: 30px;
-                color: white;
-                user-select: none;
-
-            }
-
-
-
-        </style>
 
     </body>
 </html>
