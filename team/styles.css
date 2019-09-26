@@ -27,7 +27,7 @@ body {
     max-height: 80%; }
 
 .header {
-  width: 60%;
+  width: 80%;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -35,10 +35,9 @@ body {
   transition: 0.4s;
   overflow: hidden; }
   .header a {
-    margin-left: 20px;
     color: #5995DA;
     text-decoration: none;
-    padding: 500px 10px; }
+    padding: 50px 30px; }
     .header a:hover {
       color: #82afe3;
       background-color: #595959; }
@@ -46,45 +45,10 @@ body {
 .sticky {
   height: 60px; }
 
-.players-container {
-  display: flex;
-  justify-content: center;
-  background-color: #303030;
-  flex: 1;
-  padding: 0 20px; }
-
-.players {
-  width: 1600px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: flex-start;
-  align-content: flex-start; }
-
-.players-item {
-  border: 10px solid #303030;
-  margin: 20px auto;
-  flex: 1 1 100px;
-  text-align: center;
-  color: white;
-  min-width: 400px;
-  max-width: 600px; }
-
-.players-item img {
-  max-width: 80%;
-  border-radius: 1px; }
-
 .player-roll {
   font-weight: bold;
   text-align: left;
   margin: 20px 0; }
-
-.players-inner-container {
-  border: 1px solid red;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #555555; }
 
 .player-description {
   text-align: justify; }
@@ -126,21 +90,9 @@ body {
   text-align: center;
   color: white;
   margin: 1em;
-  padding: 1em; }
-
-.players-container-flex {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start; }
-
-.players-item-flex {
-  border: 1px solid red;
-  border-radius: 5px;
-  background-color: #555555;
-  text-align: center;
-  color: white;
-  margin: 1em;
   padding: 1em;
-  flex: 0 1 20%; }
+  box-shadow: 20px 20px 10px black; }
+  .players-item-grid img {
+    max-width: 80%; }
 
 /*# sourceMappingURL=styles.css.map */

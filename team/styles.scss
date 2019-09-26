@@ -38,7 +38,7 @@ body{
 }
 
 .header{
-    width: 60%;
+    width: 80%;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -46,10 +46,10 @@ body{
     transition: 0.4s;
     overflow: hidden;
     a{
-        margin-left: 20px;
+
         color: $blue;
         text-decoration: none;
-        padding: 500px 10px;
+        padding: 50px 30px;
         &:hover{
             color: #82afe3;
             background-color: #595959;
@@ -62,39 +62,6 @@ body{
     height: 60px
 }
 
-.players-container{
-    display: flex;
-    justify-content: center;
-    background-color: $players-bg-color;
-    flex: 1;
-    padding: 0 20px;
-
-}
-
-.players{
-    width: $width;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-start;
-    align-content: flex-start;
-}
-
-.players-item{
-    border: 10px solid $players-bg-color;
-    margin: 20px auto;
-    flex: 1 1 100px;
-    text-align: center;
-    color: white;
-    min-width: 400px;
-    max-width: 600px;
-}
-
-.players-item img {
-    max-width:80%;
-    border-radius: 1px;
-}
 
 .player-roll{
     font-weight: bold;
@@ -102,12 +69,6 @@ body{
     margin: 20px 0;
 }
 
-.players-inner-container{
-    border: 1px solid red;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: $players-color;
-}
 
 .player-description{
     text-align: justify;
@@ -167,33 +128,10 @@ body{
     color: white;
     margin: 1em;
     padding: 1em;
-}
-
-
-.players-container-flex {
-    display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
-
+    img{max-width: 80%};
+    box-shadow:20px 20px 10px black;
 
 }
-
-.players-item-flex{
-    border: 1px solid red;
-    border-radius: 5px;
-    background-color: $players-color;
-    text-align: center;
-    color: white;
-    margin: 1em;
-    padding: 1em;
-
-    flex: 0 1 20%;
-
-}
-
-
-
-
 
 
 
