@@ -5,7 +5,8 @@
   font-family: 'Monda', sans-serif; }
 
 body {
-  cursor: url(/images/cursor-crosshair.png) 16 16, auto; }
+  Xcursor: url(/images/cursor-crosshair.png) 16 16, auto;
+  background-color: #303030; }
 
 .super-container {
   display: flex;
@@ -20,24 +21,27 @@ body {
   position: -webkit-sticky;
   /* Safari */
   position: sticky;
-  top: 0; }
+  top: 0;
+  height: 100px; }
   .header-container img {
     max-height: 80%; }
 
 .header {
   width: 60%;
-  height: 100px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 0.4s; }
+  transition: 0.4s;
+  overflow: hidden; }
   .header a {
     margin-left: 20px;
     color: #5995DA;
     text-decoration: none;
-    padding: 10px; }
+    padding: 500px 10px; }
     .header a:hover {
-      color: #82afe3; }
+      color: #82afe3;
+      background-color: #595959; }
 
 .sticky {
   height: 60px; }
@@ -46,7 +50,8 @@ body {
   display: flex;
   justify-content: center;
   background-color: #303030;
-  flex: 1; }
+  flex: 1;
+  padding: 0 20px; }
 
 .players {
   width: 1600px;
@@ -54,14 +59,17 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  align-items: flex-start; }
+  align-items: flex-start;
+  align-content: flex-start; }
 
 .players-item {
   border: 10px solid #303030;
   margin: 20px auto;
-  max-width: 450px;
+  flex: 1 1 100px;
   text-align: center;
-  color: white; }
+  color: white;
+  min-width: 400px;
+  max-width: 600px; }
 
 .players-item img {
   max-width: 80%;
@@ -103,5 +111,36 @@ body {
   background-color: #494949;
   flex: initial;
   width: 100px; }
+
+.players-container-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: center;
+  margin: 0 auto; }
+
+.players-item-grid {
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #555555;
+  text-align: center;
+  color: white;
+  margin: 1em;
+  padding: 1em; }
+
+.players-container-flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start; }
+
+.players-item-flex {
+  border: 1px solid red;
+  border-radius: 5px;
+  background-color: #555555;
+  text-align: center;
+  color: white;
+  margin: 1em;
+  padding: 1em;
+  flex: 0 1 20%; }
 
 /*# sourceMappingURL=styles.css.map */
