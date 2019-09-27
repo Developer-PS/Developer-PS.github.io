@@ -116,7 +116,7 @@ body{
 
 .players-container-grid {
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 0.8fr));
     justify-content: center;
     margin: 0 auto;
 
