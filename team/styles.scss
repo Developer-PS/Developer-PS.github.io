@@ -15,11 +15,10 @@ $header-bg-color:  #494949;
 $width: 1600px;
 
 body{
-    Xcursor: url(/images/cursor-crosshair.png) 16 16, auto;
+    cursor: url(/images/cursor-crosshair.png) 16 16, auto;
     background-color: $players-bg-color;
     background-image: url("/images/background.jpg");
-    width: 100vw;
-    height: 100vh;
+
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

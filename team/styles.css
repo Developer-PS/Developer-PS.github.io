@@ -5,11 +5,9 @@
   font-family: 'Monda', sans-serif; }
 
 body {
-  Xcursor: url(/images/cursor-crosshair.png) 16 16, auto;
+  cursor: url(/images/cursor-crosshair.png) 16 16, auto;
   background-color: #303030;
   background-image: url("/images/background.jpg");
-  width: 100vw;
-  height: 100vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed; }
