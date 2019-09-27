@@ -53,7 +53,7 @@
             user-select: none;
 
         }
-    #history{
+    #history,#average{
         top: 0px; text-align: center;
         color: #e2e2e2;
     }
@@ -63,6 +63,7 @@
 
         <div id="game">
             <div id="history"></div>
+            <div id="average"></div>
 
             <div id ="info">
                 <div id ="result"></div>
@@ -122,6 +123,7 @@
 
                 if(red){//if red is already there
                     let tmpTime=millisecondsToTime(reactionTime);
+                    displayAvg(reactionTime);
                     $( "#info" ).html("Your Time: "+ tmpTime +" <br> Click to restart!");
                     red=false;
                     history.push(" "+tmpTime);
@@ -149,6 +151,7 @@
             //converts miliseconds to seconds.miliseconds
             function millisecondsToTime(milli)
             {
+
                 if (milli>1000){
                 var milliseconds = milli % 1000;
                 var seconds = Math.floor((milli / 1000));
@@ -164,6 +167,15 @@
                 return Math.random() * (max - min) + min;
             }
 
+            let i=0;
+            let avg=0;
+            let sum=0;
+            function displayAvg(ms) {
+                sum += ms;
+                i++;
+                avg = Math.round(sum/i);
+                $("#average").text("Average: "+ millisecondsToTime(avg));
+            }
 
         </script>
 
