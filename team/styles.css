@@ -37,7 +37,9 @@ body {
   justify-content: space-between;
   align-items: center;
   transition: 0.4s;
-  overflow: hidden; }
+  overflow: hidden;
+}
+
   .header a {
     color: #5995DA;
     text-decoration: none;
